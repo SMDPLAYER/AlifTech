@@ -14,8 +14,12 @@ import java.util.concurrent.Executors
 class MainViewModel @ViewModelInject constructor(private val repository: MyRepository) :
     ViewModel() {
     lateinit var data: LiveData<List<MarsProperty>>
-
+    val handleLoad = MutableLiveData<Boolean>()
     init {
+      loadData()
+    }
+    fun loadData(){
+        handleLoad.value=false
         viewModelScope.launch {
             data = repository.getData()
         }

@@ -55,7 +55,7 @@ class VH(override val containerView: View) : RecyclerView.ViewHolder(containerVi
         itemView.textExecutor.text = posts.startDate
         itemView.textName.text = posts.endDate
         itemView.name.text = posts.name
-        itemView.textType.text = itemView.context.getString(R.string.remote)
+        itemView.textType.setText(R.string.remote)
         if (adapterPosition>0)
         itemView.imageNew.visibility=View.VISIBLE
         itemView.setOnClickListener {
