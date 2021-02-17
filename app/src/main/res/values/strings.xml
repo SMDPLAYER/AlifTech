@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Alif Tech</string>
+    <string name="empty_body">Diqqat serverdan to\'liq malumot kelmayapti</string>
+    <string name="remote">REMOTE</string>
+</resources>

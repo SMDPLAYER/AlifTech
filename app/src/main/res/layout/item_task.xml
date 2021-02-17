@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageProgramsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+      android:visibility="invisible"
+            android:scaleType="centerCrop"
+            android:src="@drawable/holder_programs" />
+        <View
+            android:id="@+id/layoutLeft"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+
+            app:constraint_referenced_ids="textDate" />
+
+        <TextView
+            android:id="@+id/textType"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Location"
+            android:layout_marginTop="10dp"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageType"
+            app:layout_constraintStart_toStartOf="@+id/imageType"
+            app:layout_constraintTop_toBottomOf="@+id/imageType" />
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="invisible"
+            android:padding="10dp"
+            android:text="10-22-2020"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
+            app:layout_constraintStart_toEndOf="@+id/layoutLeft" />
+
+        <FrameLayout
+            android:id="@+id/layoutMiddle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:background="#E6E6E6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageCircleBegin"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/sp_circle"
+            app:layout_constraintRight_toLeftOf="@id/textExecutor"
+            app:layout_constraintTop_toTopOf="@id/textExecutor" />
+
+        <ImageView
+            android:id="@+id/imageCircleEnd"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/sp_circle"
+            app:layout_constraintBottom_toBottomOf="@id/textName"
+            app:layout_constraintRight_toLeftOf="@id/textName" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:background="@drawable/sp_line"
+            app:layout_constraintBottom_toTopOf="@id/imageCircleEnd"
+            app:layout_constraintLeft_toLeftOf="@id/imageCircleBegin"
+            app:layout_constraintRight_toRightOf="@id/imageCircleBegin"
+            app:layout_constraintTop_toBottomOf="@id/imageCircleBegin" />
+
+        <TextView
+            android:id="@+id/textExecutor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:text="Start date"
+            android:textColor="#3A3A3A"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/layoutMiddle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#E6E6E6"
+            app:layout_constraintLeft_toLeftOf="@id/textExecutor"
+            app:layout_constraintRight_toRightOf="@id/textExecutor"
+            app:layout_constraintTop_toBottomOf="@id/textExecutor" />
+
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="3"
+            android:text="End data"
+            android:textColor="#3A3A3A"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/textExecutor"
+            app:layout_constraintRight_toRightOf="@id/textExecutor"
+            app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+        <ImageView
+            android:id="@+id/imageNew"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/new_box"
+android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+android:text="Name"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textType"
+            app:layout_constraintTop_toBottomOf="@+id/textName" />
+
+        <ImageView
+            android:id="@+id/imageType"
+            android:layout_width="65dp"
+            android:src="@drawable/loading_animation"
+            android:layout_height="65dp"
+            app:layout_constraintEnd_toStartOf="@+id/layoutMiddle"
+            app:layout_constraintStart_toEndOf="@+id/layoutLeft"
+            app:layout_constraintTop_toTopOf="@+id/textExecutor" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
